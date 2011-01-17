@@ -97,6 +97,8 @@ extern	void		makecontext(ucontext_t*, void(*)(), int, ...);
 #		include "386-ucontext.h"
 #	elif defined(__x86_64__)
 #		include "amd64-ucontext.h"
+#	elif defined(__arm__)
+#		include "arm-ucontext.h"
 #	else
 #		include "power-ucontext.h"
 #	endif	
@@ -123,7 +125,7 @@ extern pid_t rfork_thread(int, void*, int(*)(void*), void*);
 #	include "sparc-ucontext.h"
 #endif
 
-#if defined(__arm__)
+#if defined(__arm__) && defined(__linux__)
 int getmcontext(mcontext_t*);
 void setmcontext(const mcontext_t*);
 #define	setcontext(u)	setmcontext(&(u)->uc_mcontext)

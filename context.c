@@ -9,6 +9,9 @@
 #elif defined(__x86_64__)
 #define NEEDAMD64MAKECONTEXT
 #define NEEDSWAPCONTEXT
+#elif defined(__arm__)
+#define NEEDARMMAKECONTEXT
+#define NEEDSWAPCONTEXT
 #else
 #define NEEDPOWERMAKECONTEXT
 #define NEEDSWAPCONTEXT

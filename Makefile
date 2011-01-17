@@ -1,4 +1,5 @@
 LIB=libtask.a
+IPHONE_LIB = libtask-iphone.a
 TCPLIBS=
 
 ASM=asm.o
@@ -46,9 +47,15 @@ testdelay1: testdelay1.o $(LIB)
 	$(CC) -o testdelay1 testdelay1.o $(LIB)
 
 clean:
-	rm -f *.o primes tcpproxy testdelay testdelay1 httpload $(LIB)
+	rm -f *.o primes tcpproxy testdelay testdelay1 httpload $(LIB) $(IPHONE_LIB)
+	rm -rf build
 
 install: $(LIB)
 	cp $(LIB) /usr/local/lib
 	cp task.h /usr/local/include
+
+iphone:
+	xcodebuild -project task.xcodeproj -sdk iphoneos -configuration Release
+	xcodebuild -project task.xcodeproj -sdk iphonesimulator -configuration Debug
+	lipo build/Debug-iphonesimulator/libtask.a build/Release-iphoneos/libtask.a -create -output $(IPHONE_LIB)
 
