@@ -5,7 +5,6 @@ TCPLIBS=
 ASM=asm.o
 OFILES=\
 	$(ASM)\
-	channel.o\
 	context.o\
 	fd.o\
 	net.o\
@@ -14,9 +13,9 @@ OFILES=\
 	rendez.o\
 	task.o\
 
-all: $(LIB) primes tcpproxy testdelay
+all: $(LIB) tcpproxy
 
-$(OFILES): taskimpl.h task.h 386-ucontext.h power-ucontext.h
+$(OFILES): taskimpl.h task.h 386-ucontext.h power-ucontext.h arm-ucontext.h
 
 AS=gcc -c
 CC=gcc
@@ -31,23 +30,14 @@ CFLAGS=-Wall -c -I. -ggdb
 $(LIB): $(OFILES)
 	ar rvc $(LIB) $(OFILES)
 
-primes: primes.o $(LIB)
-	$(CC) -o primes primes.o $(LIB)
-
 tcpproxy: tcpproxy.o $(LIB)
 	$(CC) -o tcpproxy tcpproxy.o $(LIB) $(TCPLIBS)
 
 httpload: httpload.o $(LIB)
 	$(CC) -o httpload httpload.o $(LIB)
 
-testdelay: testdelay.o $(LIB)
-	$(CC) -o testdelay testdelay.o $(LIB)
-
-testdelay1: testdelay1.o $(LIB)
-	$(CC) -o testdelay1 testdelay1.o $(LIB)
-
 clean:
-	rm -f *.o primes tcpproxy testdelay testdelay1 httpload $(LIB) $(IPHONE_LIB)
+	rm -f *.o primes tcpproxy httpload $(LIB) $(IPHONE_LIB)
 	rm -rf build
 
 install: $(LIB)

@@ -18,7 +18,6 @@
 		86BDBD8012E32D0D00EB4465 /* mips-ucontext.h in Headers */ = {isa = PBXBuildFile; fileRef = 86BDBD7112E32D0D00EB4465 /* mips-ucontext.h */; };
 		86BDBD8112E32D0D00EB4465 /* fd.c in Sources */ = {isa = PBXBuildFile; fileRef = 86BDBD7212E32D0D00EB4465 /* fd.c */; };
 		86BDBD8212E32D0D00EB4465 /* context.c in Sources */ = {isa = PBXBuildFile; fileRef = 86BDBD7312E32D0D00EB4465 /* context.c */; };
-		86BDBD8312E32D0D00EB4465 /* channel.c in Sources */ = {isa = PBXBuildFile; fileRef = 86BDBD7412E32D0D00EB4465 /* channel.c */; };
 		86BDBD8412E32D0D00EB4465 /* asm.S in Sources */ = {isa = PBXBuildFile; fileRef = 86BDBD7512E32D0D00EB4465 /* asm.S */; };
 		86BDBD8512E32D0D00EB4465 /* amd64-ucontext.h in Headers */ = {isa = PBXBuildFile; fileRef = 86BDBD7612E32D0D00EB4465 /* amd64-ucontext.h */; };
 		86BDBD8612E32D0D00EB4465 /* 386-ucontext.h in Headers */ = {isa = PBXBuildFile; fileRef = 86BDBD7712E32D0D00EB4465 /* 386-ucontext.h */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		862F02A212E427D500C9FCA5 /* primes.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = primes.c; sourceTree = "<group>"; };
 		86BDBD6912E32D0D00EB4465 /* taskimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taskimpl.h; sourceTree = "<group>"; };
 		86BDBD6A12E32D0D00EB4465 /* task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = task.h; sourceTree = "<group>"; };
 		86BDBD6B12E32D0D00EB4465 /* task.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = task.c; sourceTree = "<group>"; };
@@ -38,7 +36,6 @@
 		86BDBD7112E32D0D00EB4465 /* mips-ucontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mips-ucontext.h"; sourceTree = "<group>"; };
 		86BDBD7212E32D0D00EB4465 /* fd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fd.c; sourceTree = "<group>"; };
 		86BDBD7312E32D0D00EB4465 /* context.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = context.c; sourceTree = "<group>"; };
-		86BDBD7412E32D0D00EB4465 /* channel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = channel.c; sourceTree = "<group>"; };
 		86BDBD7512E32D0D00EB4465 /* asm.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = asm.S; sourceTree = "<group>"; };
 		86BDBD7612E32D0D00EB4465 /* amd64-ucontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "amd64-ucontext.h"; sourceTree = "<group>"; };
 		86BDBD7712E32D0D00EB4465 /* 386-ucontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "386-ucontext.h"; sourceTree = "<group>"; };
@@ -88,7 +85,6 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				862F02A212E427D500C9FCA5 /* primes.c */,
 				86BDBD6912E32D0D00EB4465 /* taskimpl.h */,
 				86BDBD6A12E32D0D00EB4465 /* task.h */,
 				86BDBD6B12E32D0D00EB4465 /* task.c */,
@@ -100,7 +96,6 @@
 				86BDBD7112E32D0D00EB4465 /* mips-ucontext.h */,
 				86BDBD7212E32D0D00EB4465 /* fd.c */,
 				86BDBD7312E32D0D00EB4465 /* context.c */,
-				86BDBD7412E32D0D00EB4465 /* channel.c */,
 				86BDBD7512E32D0D00EB4465 /* asm.S */,
 				86BDBD7612E32D0D00EB4465 /* amd64-ucontext.h */,
 				86BDBD7712E32D0D00EB4465 /* 386-ucontext.h */,
@@ -188,7 +183,6 @@
 				86BDBD7F12E32D0D00EB4465 /* net.c in Sources */,
 				86BDBD8112E32D0D00EB4465 /* fd.c in Sources */,
 				86BDBD8212E32D0D00EB4465 /* context.c in Sources */,
-				86BDBD8312E32D0D00EB4465 /* channel.c in Sources */,
 				86BDBD8412E32D0D00EB4465 /* asm.S in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
