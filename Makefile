@@ -16,7 +16,7 @@ OFILES=\
 
 all: $(LIB) primes tcpproxy testdelay
 
-$(OFILES): taskimpl.h task.h 386-ucontext.h power-ucontext.h
+$(OFILES): taskimpl.h task.h 386-ucontext.h power-ucontext.h arm-ucontext.h
 
 AS=gcc -c
 CC=gcc
